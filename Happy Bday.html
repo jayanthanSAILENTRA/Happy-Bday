@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🎂 Happy Birthday Tanmaya! 🎉</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: radial-gradient(circle at center, #ff9a9e, #fad0c4);
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      color: #fff;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 4rem;
+      color: #ffffff;
+      text-shadow: 2px 2px 8px #f7971e, 0 0 10px #ffd200;
+      animation: pulse 2s infinite;
+    }
+
+    p {
+      font-size: 1.5rem;
+      margin-top: 20px;
+      max-width: 600px;
+    }
+
+    .french {
+      margin-top: 10px;
+      font-size: 1.2rem;
+      font-style: italic;
+      color: #fffbe0;
+    }
+
+    img {
+      max-width: 250px;
+      border-radius: 20px;
+      margin-top: 25px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+
+    .confetti {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background-color: white;
+      opacity: 0.9;
+      animation: fall 5s linear infinite;
+      border-radius: 50%;
+    }
+
+    @keyframes fall {
+      0% { transform: translateY(-10px) rotate(0deg); }
+      100% { transform: translateY(100vh) rotate(720deg); }
+    }
+
+    .cake {
+      font-size: 3rem;
+      margin-top: 30px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-10px); }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎈 Happy Birthday, <strong>Tanmaya</strong>! 🎈</h1>
+  <p>May your birthday be the start of a year filled with good luck, good health, and much happiness. You deserve all the wonderful things life has to offer. 🌷</p>
+  <p class="french">Joyeux anniversaire, Tanmaya ! Que cette journée soit remplie d’amour, de rires et de souvenirs inoubliables. 🥳</p>
+  <img src="/mnt/data/461083744_1050997119457416_261719911852877576_n.jpg" alt="Tanmaya's Photo">
+  <div class="cake">🎂🕯️</div>
+
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    for (let i = 0; i < 150; i++) {
+      const confetti = document.createElement('div');
+      confetti.className = 'confetti';
+      confetti.style.left = Math.random() * 100 + 'vw';
+      confetti.style.top = -Math.random() * 100 + 'px';
+      confetti.style.backgroundColor = ['#ffffff', '#ff6a00', '#ee0979', '#ffd700', '#00e0ff'][Math.floor(Math.random() * 5)];
+      confetti.style.animationDuration = (Math.random() * 2 + 3) + 's';
+      document.body.appendChild(confetti);
+    }
+  </script>
+</body>
+</html>
