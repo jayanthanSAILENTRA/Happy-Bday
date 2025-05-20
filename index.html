@@ -10,13 +10,20 @@
       background: radial-gradient(circle at center, #ff9a9e, #fad0c4);
       font-family: 'Comic Sans MS', cursive, sans-serif;
       color: #fff;
-      overflow: hidden;
+      overflow-y: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      height: 100vh;
+      justify-content: flex-start;
+      min-height: 100vh;
       text-align: center;
+      scroll-behavior: smooth;
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none; /* IE/Edge */
+    }
+
+    body::-webkit-scrollbar {
+      display: none; /* Chrome, Safari */
     }
 
     h1 {
@@ -24,11 +31,12 @@
       color: #ffffff;
       text-shadow: 2px 2px 8px #f7971e, 0 0 10px #ffd200;
       animation: pulse 2s infinite;
+      margin-top: 50px;
     }
 
     p {
       font-size: 1.5rem;
-      margin-top: 20px;
+      margin: 20px;
       max-width: 600px;
     }
 
