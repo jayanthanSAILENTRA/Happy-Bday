@@ -3,14 +3,24 @@
 <head>
   <meta charset="UTF-8">
   <title>🎂 Happy Birthday Tanmaya! 🎉</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
+    html {
+      scrollbar-width: none; /* Firefox */
+      -ms-overflow-style: none;  /* IE 10+ */
+    }
+
+    html::-webkit-scrollbar {
+      display: none; /* Chrome, Safari, Opera */
+    }
+
     body {
       margin: 0;
       padding: 0;
       background: radial-gradient(circle at center, #ff9a9e, #fad0c4);
       font-family: 'Comic Sans MS', cursive, sans-serif;
       color: #fff;
-      overflow-y: auto;
+      overflow-y: scroll;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -18,16 +28,11 @@
       min-height: 100vh;
       text-align: center;
       scroll-behavior: smooth;
-      scrollbar-width: none; /* Firefox */
-      -ms-overflow-style: none; /* IE/Edge */
-    }
-
-    body::-webkit-scrollbar {
-      display: none; /* Chrome, Safari */
+      -webkit-overflow-scrolling: touch;
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: 3rem;
       color: #ffffff;
       text-shadow: 2px 2px 8px #f7971e, 0 0 10px #ffd200;
       animation: pulse 2s infinite;
@@ -35,19 +40,20 @@
     }
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       margin: 20px;
-      max-width: 600px;
+      max-width: 90vw;
     }
 
     .french {
       margin-top: 10px;
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-style: italic;
       color: #fffbe0;
     }
 
     img {
+      width: 80%;
       max-width: 250px;
       border-radius: 20px;
       margin-top: 25px;
@@ -68,6 +74,7 @@
       opacity: 0.9;
       animation: fall 5s linear infinite;
       border-radius: 50%;
+      z-index: 0;
     }
 
     @keyframes fall {
@@ -76,7 +83,7 @@
     }
 
     .cake {
-      font-size: 3rem;
+      font-size: 2.5rem;
       margin-top: 30px;
       animation: bounce 1s infinite alternate;
     }
